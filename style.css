@@ -163,3 +163,13 @@ nav {
     top: 15px;
     right: 20px;
 }
+
+@media screen and (max-width: 675px) {
+    .nav-links {
+        display: none; /* Hide nav links on small screens */
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger menu */
+    }
+}
