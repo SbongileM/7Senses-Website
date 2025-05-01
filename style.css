@@ -4,8 +4,109 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
   }
+
+  :root {
+    --primary: #00a064;
+    --secondary: #264653;
+    --secondary-color: #1176c0;
+    --accent-1: #ffaf38;
+    --accent-2:#94d500;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --grey-scale: #a8aca7;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links{
+    padding: 10px 0;
+    align-items: center; 
+}
+
+
+.logo a {
+    text-decoration: none;
+    color: var(--grey-scale);
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--accent-2);
+}
+
+.nav-links li:last-child a:hover{
+    color: white;
+}
