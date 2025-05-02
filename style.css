@@ -196,7 +196,7 @@ nav {
 /*Hero section styling*/
 .btn-outline {
   background-color: transparent;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   color: var(--primary);
 }
 
@@ -220,6 +220,11 @@ nav {
   justify-content: space-between;
 }
 
+.cta_buttons{
+  display: flex;
+  gap: 300px;
+}
+
 .hero-text {
   flex: 1;
   padding-right: 50px;
@@ -233,7 +238,7 @@ nav {
 
 .hero-image img {
   width: 35rem;
-  height: 150%;
+  height: auto;
   /* border-radius: 10px; */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -244,8 +249,7 @@ nav {
 
 .hero h1 {
   font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .hero p.subtitle {
@@ -357,7 +361,40 @@ nav {
     height: auto;
 }
 
+/*features section*/
+.features {
+    padding: 100px 0;
+    text-align: center;
+}
 
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.features .btn{
+    margin-top: 50px;
+}
 
 /*Mobile devices: hide nav links and show hamburger icon*/
 @media screen and (max-width: 675px) {
