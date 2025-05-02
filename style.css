@@ -396,6 +396,117 @@ nav {
     margin-top: 50px;
 }
 
+/* Industries Section */
+.industries {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        rgba(42, 157, 143, 0.1),
+        rgba(38, 70, 83, 0.2)
+      );
+  }
+
+  .industries p{
+    max-width: 700px; 
+    margin: 0 auto 40px
+  }
+  
+  .industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .industry-card {
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 7px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+  }
+  
+  .industry-card:before {
+    content: '"';
+    font-size: 5rem;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: rgba(52, 152, 219, 0.1);
+    font-family: serif;
+  }
+  
+  .industry-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .industry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .industry-card:hover .industry-image img {
+    transform: scale(1.05);
+  }
+  
+  .industry-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  
+  .industry-card:hover .industry-content {
+    transform: translateY(0);
+  }
+  
+  .industry-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  
+  .industry-content p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .industry-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Add a slight gradient overlay to images for better readability of labels */
+  .industry-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.311) 0%, rgba(0, 0, 0, 0.415) 40%);
+  }
+
 /*Mobile devices: hide nav links and show hamburger icon*/
 @media screen and (max-width: 675px) {
   .nav-links {
