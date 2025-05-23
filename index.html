@@ -9,7 +9,7 @@
     <title>Seven Senses - Precision Energy Insights</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="icon" href="Resources\TabLogo.png" type="image/x-icon" />
+    <link rel="icon" href="Resources/TabLogo.png" type="image/x-icon" />
 </head>
 
 <body>
@@ -213,9 +213,6 @@
                     </ul>
                     <a href="#contact" class="btn">Schedule a Demo</a>
                 </div>
-                <div class="dashboard-image">
-                    <img src="Resources\Dashboard.png" alt="Monitoring Dashboard" />
-                </div>
             </div>
         </div>
     </section>
@@ -377,7 +374,7 @@
                 <li><i class="fas fa-envelope"></i> info@7sense.co.za</li>
               </ul>
               <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/svnsenses/about" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -421,7 +418,7 @@
               <h4>Legal</h4>
               <ul>
                 <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
@@ -433,6 +430,24 @@
       </footer>
 
     <script src="script.js"></script>
+    <!-- Contact Modal -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" name="surname" required>
+      <label for="contact">Contact Number:</label>
+      <input type="tel" id="contact" name="contact" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
 </body>
 
 </html>
