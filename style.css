@@ -1,10 +1,17 @@
 /* Web page reset settings */
+@font-face {
+  font-family: 'Genova';
+  src: url('fonts/Genova.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   cursor: pointer;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Genova', Arial, sans-serif;
 }
 
 /*general styling*/
