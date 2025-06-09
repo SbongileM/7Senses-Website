@@ -220,9 +220,33 @@ nav {
   font-size: 20px;
   display: block;
 }
+/* Vertically center the burger menu icon in the nav bar */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--secondary);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 110;
+}
+
+/* Make sure nav is positioned relatively for absolute positioning to work */
+nav {
+  position: relative;
+}
 
 .sidebar ul li a:hover {
   color: var(--secondary);
+}
+/* Center the social icons in the footer */
+.footer-col .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 /* Close Button */
