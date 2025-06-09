@@ -93,7 +93,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   color: var(--secondary);
 }
@@ -286,7 +286,7 @@ nav {
   padding-right: 50px;
 }
 
-.hero-image {
+/*.hero-image {
   flex: 1;
   position: relative;
 }
@@ -294,9 +294,9 @@ nav {
 .hero-image img {
   width: 100%;
   height: auto;
-  /* border-radius: 10px; */
+  border-radius: 10px; 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+}*/
 
 .hero-text {
   text-align: center;
@@ -324,6 +324,10 @@ nav {
 .section-title {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.section-title p {
+  font-size: 1.3rem;
 }
 
 .services-grid {
@@ -379,13 +383,13 @@ nav {
   color: #666;
 }
 
-/*Dashboard Section*/
+/*Dashboard Section
 .dashboard-preview {
   background-color: var(--secondary);
   padding: 100px 0;
   color: white;
 }
-/* Center dashboard-preview section content */
+/* Center dashboard-preview section content 
 .dashboard-preview .dashboard-content {
   display: flex;
   justify-content: center;
@@ -394,7 +398,7 @@ nav {
   text-align: center;
 }
 
-/* Center the dashboard list and its items */
+/* Center the dashboard list and its items 
 .dashboard-preview ul {
   list-style-position: inside;
   text-align: center;
@@ -436,11 +440,11 @@ nav {
   max-width: 100%;
   width: 100%;
   height: auto;
-}
+}*/
 
 /*features section*/
 .features {
-  padding: 100px 0;
+  padding: 0px 0px 100px 0px;
   text-align: center;
 }
 
