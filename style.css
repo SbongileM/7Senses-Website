@@ -48,6 +48,7 @@ body {
   overflow: auto; 
   background-color: rgba(0,0,0,0.5);
 }
+
 .modal-content {
   background-color: #fff;
   margin: 10% auto;
@@ -57,6 +58,7 @@ body {
   max-width: 400px;
   position: relative;
 }
+
 .close {
   color: #aaa;
   position: absolute;
@@ -65,6 +67,7 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
 .close:hover { color: #000; }
 #contactForm label {
   display: block;
@@ -78,6 +81,10 @@ body {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+ul{
+  list-style: none;
 }
 
 .container {
@@ -101,6 +108,12 @@ h2 {
 h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
+  color: var(--secondary);
+}
+
+h5 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
   color: var(--secondary);
 }
 
