@@ -123,22 +123,15 @@ nav {
   align-items: center;
 }
 
-.logo a {
-  text-decoration: none;
-  color: var(--grey-scale);
+.logo {
+  padding: 10px;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: 700;
+.logo img {
   display: flex;
   align-items: center;
-}
-
-.logo span {
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--primary);
+  height: 100%;
+  max-height: 70px;
 }
 
 .nav-links {
