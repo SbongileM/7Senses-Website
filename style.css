@@ -243,13 +243,7 @@ nav {
 .sidebar ul li a:hover {
   color: var(--secondary);
 }
-/* Center the social icons in the footer */
-.footer-col .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
+
 
 /* Close Button */
 .close-btn {
@@ -403,6 +397,28 @@ nav {
   background-color: var(--secondary);
   padding: 100px 0;
   color: white;
+}
+/* Center dashboard-preview section content */
+.dashboard-preview .dashboard-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Center the dashboard list and its items */
+.dashboard-preview ul {
+  list-style-position: inside;
+  text-align: center;
+  padding-left: 0;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.dashboard-preview ul li {
+  text-align: left;
+  display: list-item;
 }
 
 .dashboard-preview h2 {
@@ -686,6 +702,12 @@ footer {
   transform: translateY(-5px);
 }
 
+/* Left align the social icons (LinkedIn logo) in the contact-info column */
+.footer-col.contact-info .social-icons {
+  justify-content: flex-start;
+  margin-left: 0;
+}
+
 .copyright {
   text-align: center;
   padding-top: 20px;
@@ -751,3 +773,15 @@ footer {
   }
 }
 
+/* Reduce space between headings and paragraphs in modal (and generally) */
+.modal-content h1,
+.modal-content h2 {
+  margin-bottom: 0.1em; /* Reduce from default (often 1em or more) */
+}
+
+.modal-content h1 + p,
+.modal-content h2 + p,
+.modal-content h2 + ul,
+.modal-content h1 + ul {
+  margin-top: 0.1em; /* Reduce space after heading */
+}

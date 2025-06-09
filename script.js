@@ -37,4 +37,48 @@ document.addEventListener('DOMContentLoaded', function() {
       modal.style.display = 'none';
     }
   };
+
+  // Privacy Policy Modal functionality
+  const privacyModal = document.getElementById('privacyModal');
+  const openPrivacy = document.getElementById('openPrivacy');
+  const closePrivacy = document.getElementById('closePrivacy');
+
+  if (openPrivacy && privacyModal && closePrivacy) {
+    openPrivacy.addEventListener('click', function(e) {
+      e.preventDefault();
+      privacyModal.style.display = 'block';
+    });
+
+    closePrivacy.addEventListener('click', function() {
+      privacyModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target === privacyModal) {
+        privacyModal.style.display = 'none';
+      }
+    });
+  }
+
+  // Terms of Service Modal functionality
+  const termsModal = document.getElementById('termsModal');
+  const openTerms = document.getElementById('openTerms');
+  const closeTerms = document.getElementById('closeTerms');
+
+  if (openTerms && termsModal && closeTerms) {
+    openTerms.addEventListener('click', function(e) {
+      e.preventDefault();
+      termsModal.style.display = 'block';
+    });
+
+    closeTerms.addEventListener('click', function() {
+      termsModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target === termsModal) {
+        termsModal.style.display = 'none';
+      }
+    });
+  }
 });

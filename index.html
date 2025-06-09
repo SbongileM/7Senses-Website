@@ -28,7 +28,7 @@
                     <li><a href="#dashboard">Dashboard</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#industries">Industries</a></li>
-                    <li><a href="#resources">Resources</a></li>
+                    <!-- <li><a href="#resources">Resources</a></li> -->
                     <li><a href="#contact" class="btn">Contact Us</a></li>
                 </ul>
                 <!-- Hamburger Menu Icon -->
@@ -96,7 +96,7 @@
                         <div class="service-feature">
                             <i class="fas fa-bell"></i>
                             <div>
-                                <h4>Automated Renewal Alerts</h4>
+                                <h4 id="automated">Automated Renewal Alerts</h4>
                                 <p>
                                     Never miss critical deadlines with automated notifications
                                     and calendar integration.
@@ -106,7 +106,7 @@
                         <div class="service-feature">
                             <i class="fas fa-clipboard-check"></i>
                             <div>
-                                <h4>Compliance Tracking</h4>
+                                <h4 id="compliance_track">Compliance Tracking</h4>
                                 <p>
                                     Real-time compliance tracking with regulatory updates and
                                     customizable reporting.
@@ -116,7 +116,7 @@
                         <div class="service-feature">
                             <i class="fas fa-chart-pie"></i>
                             <div>
-                                <h4>Financial Analytics</h4>
+                                <h4 id="finance_an">Financial Analytics</h4>
                                 <p>
                                     Visualize contract performance with sophisticated financial
                                     modeling tools.
@@ -126,7 +126,7 @@
                         <div class="service-feature">
                             <i class="fas fa-folder-open"></i>
                             <div>
-                                <h4>Secure Document Center</h4>
+                                <h4 id="secure_docs">Secure Document Center</h4>
                                 <p>
                                     Centralized repository with version control and audit trail
                                     capabilities.
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#resources" class="btn btn-outline">Learn More</a>
+                    <!-- <a href="#resources" class="btn btn-outline">Learn More</a> -->
                 </div>
                 <div class="service-card">
                     <h3>Plant Monitoring Dashboard</h3>
@@ -147,7 +147,7 @@
                         <div class="service-feature">
                             <i class="fas fa-tachometer-alt"></i>
                             <div>
-                                <h4>Live Performance Metrics</h4>
+                                <h4 id="live_metrics">Live Performance Metrics</h4>
                                 <p>
                                     Monitor critical plant metrics in real-time with
                                     customizable thresholds and alerts.
@@ -157,7 +157,7 @@
                         <div class="service-feature">
                             <i class="fas fa-tools"></i>
                             <div>
-                                <h4>Predictive Maintenance</h4>
+                                <h4 id="predictive_maint">Predictive Maintenance</h4>
                                 <p>
                                     Identify potential issues before they occur with machine
                                     learning algorithms.
@@ -167,7 +167,7 @@
                         <div class="service-feature">
                             <i class="fas fa-solar-panel"></i>
                             <div>
-                                <h4>Production Optimization</h4>
+                                <h4 id="production_opt">Production Optimization</h4>
                                 <p>
                                     Advanced analytics to maximize energy output and identify
                                     inefficiencies.
@@ -177,7 +177,7 @@
                         <div class="service-feature">
                             <i class="fas fa-calculator"></i>
                             <div>
-                                <h4>Financial Performance</h4>
+                                <h4 id="fincance_perf">Financial Performance</h4>
                                 <p>
                                     Comprehensive ROI tracking with detailed efficiency and
                                     performance reporting.
@@ -185,7 +185,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#resources" class="btn btn-outline">Learn More</a>
+                    <!-- <a href="#resources" class="btn btn-outline">Learn More</a> -->
                 </div>
             </div>
         </div>
@@ -397,15 +397,15 @@
             <div class="footer-col">
               <h4>Services</h4>
               <ul>
-                <li><a href="#">Contract Management</a></li>
-                <li><a href="#">Plant Monitoring</a></li>
-                <li><a href="#">Compliance Reporting</a></li>
-                <li><a href="#">Financial Analysis</a></li>
-                <li><a href="#">Maintenance Scheduling</a></li>
+                <li><a href="#automated">Contract Management</a></li>
+                <li><a href="#live_metrics">Plant Monitoring</a></li>
+                <li><a href="#compliance_track">Compliance Reporting</a></li>
+                <li><a href="#finance_an">Financial Analysis</a></li>
+                <li><a href="#predictive_maint">Maintenance Scheduling</a></li>
               </ul>
             </div>
   
-            <div class="footer-col">
+            <!-- <div class="footer-col">
               <h4>Resources</h4>
               <ul>
                 <li><a href="#">Request Demo</a></li>
@@ -413,13 +413,13 @@
                 <li><a href="#">Documentation</a></li>
                 <li><a href="#">Webinars</a></li>
               </ul>
-            </div>
+            </div> -->
   
             <div class="footer-col">
               <h4>Legal</h4>
               <ul>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="#" id="openTerms">Terms of Service</a></li>
+               <li><a href="#" id="openPrivacy">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
@@ -447,6 +447,81 @@
       <input type="email" id="email" name="email" required>
       <button type="submit" class="btn">Submit</button>
     </form>
+  </div>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div id="privacyModal" class="modal">
+  <div class="modal-content" style="max-width:800px;">
+    <span class="close" id="closePrivacy">&times;</span>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: May 23, 2025</p>
+    <p>
+      Seven Senses ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
+    </p>
+    <h2>Information We Collect</h2>
+    <ul>
+      <li><strong>Personal Information:</strong> When you fill out our contact form, we may collect your name, surname, contact number, and email address.</li>
+      <li><strong>Usage Data:</strong> We may collect information about how you interact with our website (such as pages visited, browser type, etc.).</li>
+    </ul>
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To respond to your inquiries and provide customer support.</li>
+      <li>To improve our website and services.</li>
+      <li>To communicate with you about updates or offers (if you have opted in).</li>
+    </ul>
+    <h2>How We Protect Your Information</h2>
+    <p>
+      We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.
+    </p>
+    <h2>Sharing Your Information</h2>
+    <p>
+      We do not sell, trade, or otherwise transfer your personal information to outside parties except as required by law.
+    </p>
+    <h2>Your Rights</h2>
+    <p>
+      You may request access to, correction of, or deletion of your personal information by contacting us at <a href="mailto:info@7sense.co.za">info@7senses.co.za</a>.
+    </p>
+    <h2>Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be posted on this page.
+    </p>
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@7sense.co.za">info@7sense.co.za</a>.
+    </p>
+  </div>
+</div>
+
+<!-- Terms of Service Modal -->
+<div id="termsModal" class="modal">
+  <div class="modal-content" style="max-width:800px;">
+    <span class="close" id="closeTerms">&times;</span>
+    <h1>Terms of Service</h1>
+    <p>Last updated: May 23, 2025</p>
+    <p>
+      Welcome to Seven Senses. By accessing or using our website, you agree to be bound by these Terms of Service.
+    </p>
+    <h2>Use of Site</h2>
+    <p>
+      You agree to use this site only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use of the site.
+    </p>
+    <h2>Intellectual Property</h2>
+    <p>
+      All content on this site, including text, graphics, logos, and images, is the property of Seven Senses or its content suppliers and is protected by copyright laws.
+    </p>
+    <h2>Limitation of Liability</h2>
+    <p>
+      Seven Senses is not liable for any damages arising from the use or inability to use this site or any information provided on the site.
+    </p>
+    <h2>Changes to Terms</h2>
+    <p>
+      We may update these Terms of Service from time to time. Any changes will be posted on this page.
+    </p>
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions about these Terms, please contact us at <a href="mailto:info@7sense.co.za">info@7sense.co.za</a>.
+    </p>
   </div>
 </div>
 </body>
