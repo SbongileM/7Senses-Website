@@ -96,6 +96,14 @@ body {
   font-size: 1rem;
 }
 
+.privacy-text{
+  font-size: 1rem;
+}
+
+#email_address{
+  color: var(--primary);
+}
+
 ul {
   list-style: none;
 }
