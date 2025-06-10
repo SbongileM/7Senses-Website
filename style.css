@@ -1,7 +1,7 @@
 /* Web page reset settings */
 @font-face {
-  font-family: 'Genova';
-  src: url('Resources/Fonts/Genova.otf') format('opentype');
+  font-family: "Genova";
+  src: url("Resources/Fonts/Genova.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
@@ -11,10 +11,8 @@
   margin: 0;
   padding: 0;
   cursor: pointer;
-  font-family: 'Genova', Arial, sans-serif;
+  font-family: "Genova", Arial, sans-serif;
 }
-
-
 
 /*general styling*/
 html {
@@ -40,13 +38,15 @@ body {
 
 /* Modal Styles */
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 9999; 
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.5);
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -55,20 +55,23 @@ body {
   padding: 30px 20px;
   border-radius: 8px;
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   position: relative;
 }
 
 .close {
   color: #aaa;
   position: absolute;
-  top: 10px; right: 20px;
+  top: 10px;
+  right: 20px;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
 }
 
-.close:hover { color: #000; }
+.close:hover {
+  color: #000;
+}
 #contactForm label {
   display: block;
   margin-top: 10px;
@@ -83,7 +86,17 @@ body {
   border-radius: 4px;
 }
 
-ul{
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+ul {
   list-style: none;
 }
 
@@ -202,7 +215,7 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   z-index: 110;
-  color: var(--secondary)
+  color: var(--secondary);
 }
 
 /* Sidebar Menu (Hidden by Default) */
@@ -243,7 +256,6 @@ nav {
 .sidebar ul li a:hover {
   color: var(--secondary);
 }
-
 
 /* Close Button */
 .close-btn {
