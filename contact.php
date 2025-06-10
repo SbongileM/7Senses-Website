@@ -78,8 +78,8 @@ try {
         $mail->isSMTP();
         $mail->Host       = 'smtp.office365.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'smdaki@7senses.co.za';        
-        $mail->Password   = '@RandomSense01';               
+        $mail->Username   = 'info@7senses.co.za';        
+        $mail->Password   = '@RandomSense';               
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         
