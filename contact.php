@@ -6,7 +6,7 @@ header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // Only process POST requests
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+if ($_SERVER['CONTACT'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['success' => false, 'error' => 'Method not allowed']);
     exit;
@@ -60,8 +60,38 @@ try {
     ]);
     
     // Prepare email content
-    $email_subject = "New Contact Form Submission from $name";
-    $email_body = "
+    // Include PHPMailer
+    require_once 'phpmailer/src/PHPMailer.php';
+    require_once 'phpmailer/src/SMTP.php';
+    require_once 'phpmailer/src/Exception.php';
+    
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+    
+    // Create PHPMailer instance
+    $mail = new PHPMailer(true);
+    $email_sent = false;
+    
+    try {
+        // Server settings for Microsoft 365
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.office365.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'smdaki@7senses.co.za';        
+        $mail->Password   = '@RandomSense01';               
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
+        
+        // Recipients
+        $mail->setFrom('smdaki@7senses.co.za', 'Seven Senses');
+        $mail->addAddress('smdaki@7senses.co.za', 'Seven Senses');  // Where to send the form data
+        $mail->addReplyTo($email, $name . ' ' . $company_name);
+        
+        // Content
+        $mail->isHTML(false); 
+        $mail->Subject = "New Contact Form Submission from $name $company_name";
+        $mail->Body    = "
 New contact form submission:
 
 Name: $name
@@ -74,16 +104,15 @@ Message:
 " . ($message ?: 'No message provided') . "
 
 Submitted at: " . date('Y-m-d H:i:s') . "
-    ";
-    
-    // Email configuration - UPDATE WITH YOUR EMAIL
-    $to_email = "smdaki@7senses.co.za";
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-    
-    // Send email
-    $email_sent = mail($to_email, $email_subject, $email_body, $headers);
+        ";
+        
+        $mail->send();
+        $email_sent = true;
+        
+    } catch (Exception $e) {
+        error_log("Email sending failed: {$mail->ErrorInfo}");
+        $email_sent = false;
+    }
     
     // Return success response
     echo json_encode([
